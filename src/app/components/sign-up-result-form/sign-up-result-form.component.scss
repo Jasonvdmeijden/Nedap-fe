@@ -1,0 +1,49 @@
+$font-family: 'Roboto', sans-serif;
+$background-color: #f5f5f5;
+$success-color: #048000;
+$error-color: #f44336;
+$font-color: #023a4f;
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+  font-family: $font-family;
+  color: $font-color;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .success-message {
+    color: $success-color;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .error-message {
+    color: $error-color;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .message-body {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  

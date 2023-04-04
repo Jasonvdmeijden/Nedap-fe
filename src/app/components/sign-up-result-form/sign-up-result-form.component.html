@@ -1,0 +1,17 @@
+<div class="card-container">
+<div class="card">
+    <div *ngIf="result === 'successful'">
+        <div class="success-message">Account created successfully!</div>
+        <div class="message-body">
+            Congratulations! Your account has been created. You can now log in and start using our app.
+        </div>
+    </div>
+    <div *ngIf="result !== 'successful'">
+        <div class="error-message">Account creation failed!</div>
+        <div class="message-body">
+            Oops! Something went wrong. Please try again later.
+        </div>
+    </div>
+</div>
+</div>
+  

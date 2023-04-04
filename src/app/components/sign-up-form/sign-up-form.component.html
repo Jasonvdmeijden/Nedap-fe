@@ -1,0 +1,37 @@
+<div class="sign-up-form-container">
+<div class="sign-up-form">
+    <h2 class="form-title">Create an account</h2>
+    <form [formGroup]="signUpForm" class="form-submit" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <mat-form-field class="form-field">
+            <mat-label class="mat-form-field-label">First Name</mat-label>
+            <input matInput class="mat-input-field" placeholder="First Name" formControlName="firstName">
+            <mat-error *ngIf="signUpForm.get('firstName')?.invalid && signUpForm.get('firstName')?.touched">First name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <mat-label class="mat-form-field-label">Last Name</mat-label>
+            <input matInput class="mat-input-field" placeholder="Last Name" formControlName="lastName">
+            <mat-error *ngIf="signUpForm.get('lastName')?.invalid && signUpForm.get('lastName')?.touched">Last name is required</mat-error>
+        </mat-form-field>
+      </div>
+      <mat-form-field class="form-field">
+            <mat-label class="mat-form-field-label">Email</mat-label>
+        <input matInput class="mat-input-field" placeholder="Email" formControlName="email">
+        <mat-error *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched">Enter a valid email</mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+            <mat-label class="mat-form-field-label">Password</mat-label>
+        <input matInput class="mat-input-field" placeholder="Password" formControlName="password" type="password">
+        <mat-error *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched">Password must be at least 8 characters and contain at least one lowercase letter, one uppercase letter, and not include the first or last name</mat-error>
+      </mat-form-field>
+      
+      <button type="submit" class="submit-btn" [disabled]="signUpForm.invalid">
+        <div *ngIf="!isLoading" class="submit-btn-text">Sign Up </div>
+        <div *ngIf="isLoading" class="loader"></div>
+      </button>
+    </form>
+</div>
+</div>  
+
+
+

@@ -29,3 +29,4 @@
 <pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash">npm <span class="hljs-built_in">test</span>
 </code></div></div></pre>
 <p>This will run the unit tests for the project.</p>
+<p>Please Note: Unit tests are not completed</p>
